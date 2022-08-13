@@ -1,0 +1,106 @@
+*{ margin: 0; padding: 0; }
+
+#menu-bar{
+    background: #0087ab;
+    text-align: left;
+    width: 100%;
+    height: 65px;
+    display: block;
+    box-shadow: 0 0 5px #000;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-adm{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+#panel-control{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.panel{
+    background: white;
+    width: 80%;
+    min-height: 80vh;
+    box-shadow: 0px 5px 10px -2px #9e9e9e;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.header-panel{
+    background: #065f92;
+    padding: 10px;
+}
+
+.row-data{
+    background: rgba(0,0,0,.05);
+    font-family: arial;
+    padding: 10px;
+    font-size: 15px;
+    border-bottom: solid 1px rgba(0,0,0,.2);
+    display: flex;
+}
+
+.info-row{
+    width: 70%;
+}
+.buttons-row{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.buttons-row button{
+    background: #505050;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.buttons-row button:hover{
+    background: #6b6b6b;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width:767px) {
+    .panel{
+        width: 90%;
+    }
+    
+    .row-data{
+        flex-direction: column;
+        font-size: 15px;
+    }
+    
+    .info-row {
+        width: 100%;
+    }
+    
+    .buttons-row {
+        width: 100%;
+        justify-content: end;
+    }
+
+    .buttons-row button{
+        background: #505050;
+        border: none;
+        padding: 8px 8px;
+        border-radius: 3px;
+        color: white;
+        cursor: pointer;
+        margin: 10px 0px 0px 10px;
+    }
+}

