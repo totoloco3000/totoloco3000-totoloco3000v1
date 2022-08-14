@@ -170,11 +170,9 @@ a{ text-decoration: none; }
     justify-content: center;
     position: relative;
     margin-left: 10px;
-    border: solid 1px rgba(0,0,0,.2);
 }
 
 .imagen div{
-    background-image: url(/img/perro2.jpg);
     background-size: cover;
     filter: blur(2px);
     opacity: .3;

@@ -73,6 +73,10 @@
     background: #6b6b6b;
 }
 
+button:disabled {
+    opacity: 0.4;
+    cursor: no-drop !important;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width:767px) {
